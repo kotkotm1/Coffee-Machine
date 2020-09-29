@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/36fe12f0d3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Coffee_Machine/css/style.css"> 
+    <title>Coffee machine</title>
+
+  </head>
+  <body>
+    <div class="container my-5 rounded">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="row coffe-btn-group mt-5 mb-3 mx-2">
+            <div class="rounded-circle coffee-btn mr-3" onclick="getCoffee('Латте', 42)"></div><span>Латте - 42</span>
+          </div>
+          <div class="row coffe-btn-group my-3 mx-2">
+            <div class="rounded-circle coffee-btn mr-3" onclick="getCoffee('Американо', 47)"></div><span>Американо - 47</span>
+          </div>
+          <div class="row coffe-btn-group my-3 mx-2">
+            <div class="rounded-circle coffee-btn mr-3" onclick="getCoffee('Эспрессо', 61)"></div><span>Эспрессо - 61</span>
+          </div>
+          <div class="row coffe-btn-group my-3 mx-2">
+            <div class="rounded-circle coffee-btn mr-3" onclick="getCoffee('Капучино', 58)"></div><span>Капучино - 58</span>
+          </div>
+          <div class="row coffe-btn-group mt-3 mb-5 mx-2">
+            <div class="rounded-circle coffee-btn mr-3" onclick="getCoffee('Лунго', 44)"></div><span>Лунго - 44</span>
+          </div>
+        </div>
+          <div class="col-sm-6">
+           <div class="row my-5">
+            <div class="col-sm-6">
+             <div id="display" class="p-3 text-center">
+               <p id = "displayInfo">Внесите деньги и закажите напиток</p>
+               <p id = "balance"></p>
+                <div class="progress" style="background:DarkSalmon;">
+                  <div class="progress-bar bg-white" role="progressbar" style="width: 0%"></div>
+                </div>               
+               </div>
+               <button type="button" class="btn btn-warning my-3"  onclick="getChange(money.value)"><i class="fas fa-coins"></i> Выдать сдачу</button>
+               <div style="position:relative;">
+               <img src ="/Coffee_Machine/img/mug_without_coffee.png" width="90%" style="position:absolute;" alt=""> 
+               <img src ="/Coffee_Machine/img/mug_coffee.png" width="90%" style="position:absolute; opacity:0;" id="coffee_mug" alt=""> 
+               </div>
+            </div>
+            <div class="col-sm-6 text-center">
+              <input type="hidden" id="money">
+              <img src="/Coffee_Machine/img/bill_acc.png" id="bill_acc" class="mx-auto" alt="">
+              <div id="change_box" class="mx-auto my-3"></div>
+            </div>
+          </div> 
+         </div>
+        </div>
+       </div>
+       
+       <div class ="container">
+         <img src="/Coffee_Machine/img/50rub.jpg" alt="" data-denomination="50">
+         <img src="/Coffee_Machine/img/100rub.jpg" alt="" data-denomination="100">
+         <img src="/Coffee_Machine/img/500rub.jpg" alt="" data-denomination="500"> 
+       </div>
+    
+    <script src="/Coffee_Machine/js/script.js"></script>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
